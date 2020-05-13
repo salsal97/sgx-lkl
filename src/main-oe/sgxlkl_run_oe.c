@@ -823,8 +823,6 @@ void set_tls(sgxlkl_config_t* conf)
         // to be by actually using one of the FSGSBASE instructions to check
         // whether it causes a #UD exception.
 
-        sgxlkl_info("WE ARE IN conf->mode != SW_DEBUG_MODE) code\n");
-
         struct sigaction sa;
         memset(&sa, 0, sizeof(struct sigaction));
         sa.sa_flags = SA_SIGINFO;
